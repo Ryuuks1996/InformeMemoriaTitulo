@@ -1,6 +1,12 @@
 %% inicio, la clase del documento es iccmemoria.cls
 \documentclass{iccmemoria}
- 
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[table, xcdraw]{xcolor}
+\usepackage{float}
+\usepackage{cellspace}
+\setlength{\cellspacetoplimit}{3pt}
+\usepackage[usestackEOL]{stackengine}
+\def\tablename{Tabla}
 %% datos generales y para la tapa
 \titulo{Título de la Memoria}
 \author{Nombre del Estudiante}
@@ -105,6 +111,19 @@ Aquí va el texto de la primera sección del primer apéndice...
 
 \section{La segunda sección del primer apéndice}
 Aquí va el texto de la segunda sección del primer apéndice...
+
+\begin{table}[H]
+	\begin{tabular}{|
+>{\columncolor[HTML]{DAE8FC}}l | c | c | c | c | c | c | c | c |}
+	\hline
+	& \cellcolor[HTML]{DAE8FC}\textbf{0-5 años} & \cellcolor[HTML]{DAE8FC}\textbf{6-4 años} & \cellcolor[HTML]{DAE8FC}\textbf{15-29 años} & \cellcolor[HTML]{DAE8FC}\textbf{30-44 años} & \cellcolor[HTML]{DAE8FC}\textbf{45-64 años} & \cellcolor[HTML]{DAE8FC}\textbf{+65 años} & \cellcolor[HTML]{DAE8FC}\textbf{Total} \\ \hline
+	\textbf{Hombres} & 1.402 & 4.810 & 10.554 & 13.848 & 46.393 & 65.466 & 142.473\\ \hline
+	\textbf{Mujeres} & 1.470 & 2.679 & 7.281 & 19.816 & 43.344 & 75.656 & 150.246\\ \hline
+	\textbf{Total} & 2.872 & 7.489 & 17.835 & 33.664 & 89.737 & 141.122 & 292.719\\ \hline
+	\end{tabular}
+	\caption{\textit{Primer estudio nacional de la perdida de capacidades auditivas.}}
+	\label{Primer estudio nacional de la discapacidad}
+\end{table}
 
 \subsection{La primera subsección de la segunda sección del primer apéndice}
 
