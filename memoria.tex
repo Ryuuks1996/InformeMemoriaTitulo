@@ -1,11 +1,38 @@
 %% inicio, la clase del documento es iccmemoria.cls
 \documentclass{iccmemoria}
- 
+\usepackage{float}
+%\usepackage[english]{babel}
+\RequirePackage[spanish]{babel}
+\usepackage{tabularx}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+%\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+%\usepackage[spanish]{babel}
+\usepackage[pdftex,bookmarks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+%\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{colortbl}
+\usepackage{lscape}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{caption}
+\usepackage{makecell}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{adjustbox}
+\usepackage[symbol]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
 %% datos generales y para la tapa
-\titulo{Título de la Memoria}
-\author{Nombre del Estudiante}
-\supervisor{Profesor Supervisor}
-\cosupervisor{}%Llenar si hay co-guía, no eliminar
+\titulo{Plug-in traducción de lengua de se\~{n}as a texto en Realidad Virtual}
+\author{Felipe A. Durán}
+\supervisor{Marco González}
+\cosupervisor{Claudia de la Fuente}%Llenar si hay co-guía, no eliminar
 \informante{}%Llenar si hay informante, no eliminar
 \oponente{}%Llenar cuando haya oponente definido, no eliminar
 
@@ -28,20 +55,49 @@ Agradecimientos a ...
 \end{acknowledgment}
 
 %% indices
-\tableofcontents
+\tableofcontents 
 \listoffigures
 \listoftables
 
 %% resumen
 \begin{resumen}
-Aquí va el resumen (en Castellano)... 
+
+\indent A través de todo el mundo hay personas que pierden la capacidad auditiva. Hoy en día, con la evolución de las redes sociales desde Messenger, Facebook, WhatsApp, etc. Hasta plataformas de realidad virtual como VRChat, VTime, QHspace VR, entre otros. Donde puedes personalizar tu personaje (avatar), la cual será necesario para poder interactuar con los diferentes jugadores~\cite{montemorano2020body}. Sin embargo, dichas personas están excluidas de estas plataformas, puesto que la única forma de comunicación sería escribiendo por teclado, pero no pueden comunicarse por micrófono con el resto de los jugadores.\\
+\newline
+\noindent Dicho segmento es complicado, ya que siempre intentamos tratar la accesibilidad llevándolos a nuestro mundo y no entrando al de ellos, además en la actualidad, existen múltiples formas de comunicación no presencial. Por ejemplo: Redes sociales, chats, etc. Las plataformas sociales de realidad virtual son cada vez más populares hoy en día. No obstante, quedan excluidos, y solo existen programas que enseñan lengua de señas mediante dibujos o tienen un conjunto limitado de oraciones, reduciendo su lengua considerablemente.\\
+\newline
+\noindent Se presentará el primer plug-in\footnote{Plug-in es una aplicación que se relaciona con otra para agregar alguna funcionalidad nueva, generalmente muy específica.} de traducción de lengua de señas a texto, enfocándonos únicamente en el alfabeto dactilológico.  se enseñará a quienes no estén familiarizados con dicha lengua, con el objetivo de interactuar y comunicarse con los distintos jugadores que se encuentran conectados, además se reconocerá cada seña y posteriormente traducida. De esta forma, los principiantes con o sin conocimientos sean capaces de aprender de los jugadores más expertos.\\
+\newline
+\noindent Experimentos como la mejora de interacciones en mundos virtuales con hand tracking (rastreo de manos utilizada para saber el posicionamiento consecutivo de los dedos de un usuario). Hacen que, hoy en día se vuelva muy popular, dado que reemplaza los mandos para las interacciones en dichos mundos~\cite{voigt2020influence}. De tal manera, se realizarán distintos experimentos tanto para asegurarnos sobre las limitaciones de hardware, como también del gestionamiento de las señas para una traducción coherente. Por ejemplo, la velocidad con la cual se demora en reconocer un gesto o cuando una seña puede significar dos cosas diferentes dependiendo del contexto respectivamente. Con el fin de integrar a los diferentes tipos de jugadores con diversas tareas y/o actividades, así conocerán las señas básicas, y adquirirán de forma paulatina las habilidades para comunicarse con los jugadores más avezados.\\
+\newline
+\noindent Con la finalidad de crear un plug-in que nos ayude a traducir lengua de señas a texto con Oculus Quest. Proporcionando una herramienta que pueda ser usada para diversos fines. Como trabajo previo, se desarrolló un juego de supervivencia para realidad virtual con hand tracking, pero solo con unas pocas poses de mano. Se propone como trabajo futuro, una serie de minijuegos cooperativos de disparos con el propósito de aprender señas tácticas de combate, guerra y de capacitación de distintas lenguas de señas. Tales como: Chile, Argentina, México, Estados Unidos, India, entre los países que exista más demanda.
+
 \end{resumen}
 
 %% abstract
 
 %% contenido del primer capítulo
 \chapter{Primer Capítulo}
-Aquí va el texto del capítulo 1...
+Desde la antigüedad las personas utilizaban lengua de señas para poder comunicarse, en el siglo IV antes de Cristo. Así lo demuestran las declaraciones de Sócrates en Cratylus de Platón. De todas formas, estas personas congénitas para adquerir el lenguaje a través de un modo sensorial no tradicional, la visión, no era apreciado o reconocido hasta el siglo XVI ~\cite{ruben2005sign}. Hasta en la actualidad, existen muchas lengua de señas que difieren dependiendo del país, o inclusive la ciudad.\\
+\\
+\noindent Respecto a la cantidad de personas que pierden la mayor parte de su capacidad auditiva en Chile. La encuesta de Caracterización Socio-Económica Nacional registró un 5.3\% de los habitantes; el Censo de población nacional de 2002 registró un 2.2\% de las personas, y el Estudio Nacional de la Discapacidad registró un 12.9\% de la población. Asumiendo esta consideración, según el último estudio del año 2004. Existen en Chile 292.720 personas con perdida de las capacidades auditivas, la cual corresponde al 1.8\% de la población nacional \cite{zondek2004primer}. Sin embargo, frecuentemente intentamos traerlos a nuestro mundo y no entrando al de ellos siendo el principal desafio para mejorar dicha accesibilidad.
+
+
+\begin{table}[H]
+	\begin{tabular}{|
+>{\columncolor[HTML]{DAE8FC}}l | c | c | c | c | c | c | c | c |}
+	\hline
+	& \cellcolor[HTML]{DAE8FC}\textbf{0-5 años} & \textbf{6-4 años} & \textbf{15-29 años} & \textbf{30-44 años} & \textbf{45-64 años} & \textbf{+65 años} & \textbf{Total} \\ \hline
+	\textbf{Hombres} & 1.402 & 4.810 & 10.554 & 13.848 & 46.393 & 65.466 & 142.473\\ \hline
+	\textbf{Mujeres} & 1.470 & 2.679 & 7.281 & 19.816 & 43.344 & 75.656 & 150.246\\ \hline
+	\textbf{Total} & 2.872 & 7.489 & 17.835 & 33.664 & 89.737 & 141.122 & 292.719\\ \hline
+	\end{tabular}
+	\caption{\textit{Primer estudio nacional de la perdida de capacidades auditivas.}}
+	\label{Primer estudio nacional de la discapacidad}
+\end{table}
+
+\noindent Como se puede observar en la tabla \ref{Primer estudio nacional de la discapacidad}, entre más edad, mayor es la cantidad de personas con perdida de las capacidades auditivas. Por ende, nuestro público objetivo son todas aquellas personas que deseen aprender lengua de señas. No obstante, como la mayor cantidad de personas supera los 65 años, nuestras instrucciones, interfaces, tipografías, paleta de colores, sonidos y música deben ser acorde a la demanda. Sin embargo, no se debe olvidar un factor fundamental, quizás de 10 adultos mayores solo 1 o 2 juegen este juego, ya sea por la carencia del hardware o por lo difícil que es adaptarse a la tecnología actual más cuando eres de la tercera edad, lo que no quiere decir que no puedan aprender. Sin embargo, más adelante se realizará un estudio del mercado donde se especificarán sus aspectos más importantes.
+
 
 \section{La primera sección del capítulo 1}
 Aquí va el texto de la primera sección del capítulo 1... 
