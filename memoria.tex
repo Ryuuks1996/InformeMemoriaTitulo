@@ -8,10 +8,10 @@
 \usepackage[usestackEOL]{stackengine}
 \def\tablename{Tabla}
 %% datos generales y para la tapa
-\titulo{Título de la Memoria}
-\author{Nombre del Estudiante}
-\supervisor{Profesor Supervisor}
-\cosupervisor{}%Llenar si hay co-guía, no eliminar
+\titulo{Sistema de traducción de lengua de señas a texto en Realidad Virtual}
+\author{Felipe A. Durán}
+\supervisor{Marco González}
+\cosupervisor{Claudia de la Fuente}%Llenar si hay co-guía, no eliminar
 \informante{}%Llenar si hay informante, no eliminar
 \oponente{}%Llenar cuando haya oponente definido, no eliminar
 
@@ -40,7 +40,15 @@ Agradecimientos a ...
 
 %% resumen
 \begin{resumen}
-Aquí va el resumen (en Castellano)... 
+\indent A través de todo el mundo hay personas que pierden la capacidad auditiva. Hoy en día, con la evolución de las redes sociales desde Messenger, Facebook, WhatsApp, etc. Hasta plataformas de realidad virtual como VRChat, VTime, QHspace VR, entre otros. Donde puedes personalizar tu personaje (avatar), la cual será necesario para poder interactuar con los diferentes jugadores~\cite{montemorano2020body}. Sin embargo, dichas personas están excluidas de estas plataformas, puesto que la única forma de comunicación sería escribiendo por teclado, pero no pueden comunicarse por micrófono con el resto de los jugadores.\\
+\newline
+\noindent Dicho segmento es complicado, ya que siempre intentamos tratar la accesibilidad llevándolos a nuestro mundo y no entrando al de ellos, además en la actualidad, existen múltiples formas de comunicación no presencial. Por ejemplo: Redes sociales, chats, etc. Las plataformas sociales de realidad virtual son cada vez más populares hoy en día. No obstante, quedan excluidos, y solo existen programas que enseñan lengua de señas mediante dibujos o tienen un conjunto limitado de oraciones, reduciendo su lengua considerablemente.\\
+\newline
+\noindent Se presentará el primer plug-in de traducción de lengua de señas a texto, enfocándonos únicamente en el alfabeto dactilológico.  se enseñará a quienes no estén familiarizados con dicha lengua, con el objetivo de interactuar y comunicarse con los distintos jugadores que se encuentran conectados, además se reconocerá cada seña y posteriormente traducida. De esta forma, los principiantes con o sin conocimientos sean capaces de aprender de los jugadores más expertos.\\
+\newline
+\noindent Experimentos como la mejora de interacciones en mundos virtuales con hand tracking (rastreo de manos utilizada para saber el posicionamiento consecutivo de los dedos de un usuario). Hacen que, hoy en día se vuelva muy popular, dado que reemplaza los mandos para las interacciones en dichos mundos~\cite{voigt2020influence}. De tal manera, se realizarán distintos experimentos tanto para asegurarnos sobre las limitaciones de hardware, como también del gestionamiento de las señas para una traducción coherente. Por ejemplo, la velocidad con la cual se demora en reconocer un gesto o cuando una seña puede significar dos cosas diferentes dependiendo del contexto respectivamente. Con el fin de integrar a los diferentes tipos de jugadores con diversas tareas y/o actividades, así conocerán las señas básicas, y adquirirán de forma paulatina las habilidades para comunicarse con los jugadores más avezados.\\
+\newline
+\noindent Con la finalidad de crear un plug-in que nos ayude a traducir lengua de señas a texto con Oculus Quest. Proporcionando una herramienta que pueda ser usada para diversos fines. Como trabajo previo, se desarrolló un juego de supervivencia para realidad virtual con hand tracking, pero solo con unas pocas poses de mano. Se propone como trabajo futuro, una serie de minijuegos cooperativos de disparos con el propósito de aprender señas tácticas de combate, guerra y de capacitación de distintas lenguas de señas. Tales como: Chile, Argentina, México, Estados Unidos, India, entre los países que exista más demanda.
 \end{resumen}
 
 %% abstract
@@ -64,27 +72,56 @@ Desde la antigüedad las personas utilizaban lengua de señas para poder comunicar
 	\label{Primer estudio nacional de la discapacidad}
 \end{table}
 
+\noindent Como se puede observar en la tabla \ref{Primer estudio nacional de la discapacidad}, entre más edad, mayor es la cantidad de personas con perdida de las capacidades auditivas. Por ende, nuestro público objetivo son todas aquellas personas que deseen aprender lengua de señas. No obstante, como la mayor cantidad de personas supera los 65 años, nuestras instrucciones, interfaces, tipografías, paleta de colores, sonidos y música deben ser acorde a la demanda. Sin embargo, no se debe olvidar un factor fundamental, quizás de 10 adultos mayores solo 1 o 2 juegen este juego, ya sea por la carencia del hardware o por lo difícil que es adaptarse a la tecnología actual más cuando eres de la tercera edad, lo que no quiere decir que no puedan aprender. Sin embargo, más adelante se realizará un estudio del mercado donde se especificarán sus aspectos más importantes.
 
-\section{La primera sección del capítulo 1}
-Aquí va el texto de la primera sección del capítulo 1... 
+\section{Tema}
+El propósito de este trabajo es usar la técnologia actual del hand tracking con Oculus Quest para un  \textbf{desarrollo de un plug-in con lengua de señas}. Este incluye el alfabeto dactilológico y un tutorial básico para aprender a comunicarse. Sobre esto último, no es parte de la investigación incluir lengua de señas de otros países y/o minijuegos , ya que esto solo sería considerado como trabajo a futuro. 
 
-\subsection{La primera subsección de la primera sección del capítulo 1}
-Aquí va el texto de la primera subsección de la primera sección del capítulo 1... 
+\subsection{Problema}
+Hoy en día, cada vez es más fácil la comunicación entre las personas, desde las redes sociales como Facebook, Whatsapp, Instagram, etc. Hasta los VRChat que se vuelven constantemente más populares. Sin embargo, las personas que pierden la capacidad auditiva, frecuentemente son excluidas, dado que no entramos en su mundo, sino que buscamos formas de integrarlos al nuestro. 
 
-\subsection{La segunda subsección de la primera sección del capítulo 1}
-Aquí va el texto de la segunda subsección de la primera sección del capítulo 1...
+\subsection{Solución}
+Este proyecto desarrollará un \textbf{Plug-in con lengua de señas} en realidad virtual con Oculus Quest mediante hand tracking, en la cual se deberán aprobar un tutorial optativo del alfabeto dactilológico para los que quieran aprender lo básico para comunicarse.
 
-\section{La segunda sección del capítulo 1}
-Aquí va el texto de la segunda sección del capítulo 1...
+\section{Propuesta inicial}
+Se desarrollará un sistema de traducción de lengua de señas a texto con Oculus Quest con la siguiente finalidad:
+
+
+\begin{itemize}
+ \item Al ser un plug-in puede fusionarse con diversas aplicaciones o juegos con diferentes finalidades.
+ \item Finalizar el tutorial del alfabeto dactilológico (Letra A - Z) de señas básicas para comunicarse.
+ \item Jugar más tiempo y demostrar que puedes usar las diversas señas del alfabeto dactilológico aprendidas para comunicar algo de interés.
+ \end{itemize}
+
+\section{Alcance}
+En esta etapa se especificarán todos los entregables necesarios para dar por terminado el proyecto, descomponiendose en los siguientes hitos primordiales:
+
+\begin{itemize}
+	\item \textbf{Rastreo de manos: }Reconocer y reastrear las manos sin los controles del Oculus.
+	\item Reconocimiento del alfabeto dactilológico y de palabras de 4 letras o menos de LSCh de la Región Metropolitana: 
+	\begin{itemize}
+		\item \textbf{Señas estáticas: }Reconocer las letras del alfabeto dactilológico que no incluyen movimiento. Por ejemplo: La A, B, C, etc.
+		\item \textbf{Señas dinámicas: }Reconocer las letras del alfabeto dactilológico que tienen movimiento. Por ejemplo: La S, Z, etc.
+	\end{itemize}
+	\item \textbf{Traducción de seña a texto: }Guardar cada seña junto con su significado en una base de datos para cuando se reconozcan señas de palabras de 4 letras o menos, mostrando su significado almacenado en formato de texto. 
+	\item \textbf{Tutorial de aprendizaje autónomo: }Enseñará opcionalmente cada letra del alfabeto dactilológico y las señas más utilizadas para que los jugadores sin conocimientos puedan comunicarse.
+\end{itemize}
 
 
 
 %% contenido del segundo capítulo
-\chapter{Segundo Capítulo}
-Sólo para probar algunas cosas como las referencias.
-La primera cita es a Lamport~\cite{lamport79}.
-La segunda cita es para Lamport nuevamente~\cite{lamport78}.
-La última cita es para Keleher \emph{et al.}~\cite{keleher92}.
+\chapter{Objetivos}\label{Objetivos del proyecto}
+Esta sección explica el objetivo general del proyecto junto con sus objetivos específicos, estos últimos tienen un porcentaje de prioridad dependiendo del valor para el proyecto. 
+
+\subsection{Objetivo general}
+Crear un sistema de traducción de lengua de seña a texto, mediante el rastreo de manos usando Oculus Quest. Debido al tiempo, este proyecto solo usará el alfabeto dactilológico (A-Z) y las señas más usadas frecuentemente en la LSCh de la Región Metropolitana con 4 letras o menos en una primera instancia. Sin embargo, en un futuro servirá como herramienta para adaptarse a diversas necesidades. Por ejemplo: Implementar un sistema online que permita customizar nuestro personaje, expandir la lengua de señas de los distintos países, e inclusive una voz que lea dicho texto traducido, entre otras funcionalidades. Para incluir a estas personas en VRChat, VTime XR, etc.
+\subsection{Objetivos específicos}
+\begin{enumerate}
+	\item \textbf{Reconocer gestos manuales con Oculus: }Usando un sensor integrado (Leap Motion) para hacer un rastreo de cuerpo completo, ya que es el primer objetivo para empezar el proyecto, asignando solo un pequeño porcentaje, dado que existen ejemplos en la documentación de Unreal para usar dicha tecnología (handtracking). Sin embargo, no debe dejarse de lado, puesto que para realizar el objetivo de más valor del proyecto depende de un este, y es necesario para base del sistema de traducción de señas.
+	\item \textbf{Interpretar el alfabeto dactilológico y señas más utilizadas en la LSCh de la Región Metropolitana: }Utilizando un algoritmo de la distancia entre cada dedo, comparando la seña que se está haciendo con cada modelo guardado del alfabeto dactilológico. Es el objetivo de más valor, se dividen en señas estáticas y dinámicas, estas últimas necesitaremos más tiempo para su implementación, puesto que tienen movimiento y necesitaremos reconocer si su trayectoria es correcta. Logrando reconocer todo el alfabeto dactilológico junto con las señas mas utilizadas en la LSCh de la Región Metropolitana de palabras de 4 letras o menos. 
+	\item \textbf{Traducir seña a texto: }Almacenando cada seña con su respectivo significado en una base de datos. La traducción a texto es primordial para la gamificación del proyecto. Sin embargo, este proyecto solo abarcará el alfabeto dactilológico. Por ende, el objetivo anterior representa más valor y tiene un porcentaje mayor.
+	\item \textbf{Detectar seña de forma instantánea:} Ocupando un sensor de movimiento integrado. No obstante, el tiempo de detección es un desafío, porque tendremos limitaciones de hardware, y lo ideal sería una detección obtenida en el momento lo más rápido posible.
+\end{enumerate}
 
 
 %% contenido del tercer capítulo
